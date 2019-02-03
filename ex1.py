@@ -46,6 +46,13 @@ def part2_2():
     print 'Initializing gradient descent with:\n\talpha = '+str(alpha)+'\n\titerations = '+str(iterations)+'\n\ttheta = '+str(theta)+' (cost function = '+str(costFunction(X,y,theta))+')'
     theta=gradientDescent(X,y,theta,alpha,iterations)
     print 'Result: \n\ttheta = '+str(theta)+' (cost function = '+str(costFunction(X,y,theta))+')'
+
+    plt.figure()
+    plt.plot(X,y,'x',color='r')
+    plt.ylabel('Profit in $10,000s');
+    plt.xlabel('Population of City in 10,000s');
+    plt.plot(X, hipothesis(X,theta), 'b-')
+    plt.show()
 ########
 
 if __name__ == '__main__':
